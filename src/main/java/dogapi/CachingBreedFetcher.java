@@ -22,7 +22,7 @@ public class CachingBreedFetcher implements BreedFetcher {
     }
 
     @Override
-    public List<String> getSubBreeds(String breed) {
+    public List<String> getSubBreeds(String breed) throws BreedNotFoundException {
         // return statement included so that the starter code can compile and run.
         try {
             if ( this.breedMap.isEmpty() || !this.breedMap.containsKey(breed)) {
@@ -35,7 +35,7 @@ public class CachingBreedFetcher implements BreedFetcher {
             }
         }
         catch (BreedNotFoundException e) {
-            throw new BreedNotFoundException("Can't find this breed!");
+            throw new BreedNotFoundException(breed);
         }
     }
 

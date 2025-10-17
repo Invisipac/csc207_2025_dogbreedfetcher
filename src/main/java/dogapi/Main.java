@@ -33,7 +33,7 @@ public class Main {
         }
         catch (BreedFetcher.BreedNotFoundException e) {
             System.out.println(e.getMessage());
-            return -1;
+            return 0;
         }
         // return statement included so that the starter code can compile and run.
 
